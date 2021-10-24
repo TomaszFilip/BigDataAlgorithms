@@ -1,0 +1,9 @@
+Ex1
+a)scalac HelloWorld
+scala HelloWorld
+
+b)println("Hello World")
+
+c)Project in intellij
+
+Ex2
