@@ -1,4 +1,5 @@
 import java.io.{File, FileWriter}
+import java.nio.file.{Files, Paths}
 import scala.io.Source
 import scala.io.StdIn.readLine
 
@@ -14,7 +15,10 @@ class WordCloudGenerator {
       }
     else
       {
+        if (Files.exists(Paths.get(filename)))
         fileContents = Source.fromFile(filename).mkString.toLowerCase
+        else
+          println("File doesn't exist")
       }
     ProcessToWordCountPairs(fileContents)
   }
@@ -28,7 +32,7 @@ class WordCloudGenerator {
     WordCountPairs=WordCountPairs.sortWith(_._2 > _._2)
     val fileWriter = new FileWriter(new File(""+filename+".csv"))
     for(pair<-WordCountPairs.take(20)) {
-      fileWriter.write(pair._1+","+pair._2+"\n")
+      fileWriter.write(pair._2+","+pair._1+"\n")
     }
     fileWriter.close()
   }
