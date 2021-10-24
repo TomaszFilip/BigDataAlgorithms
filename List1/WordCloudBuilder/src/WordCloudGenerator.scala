@@ -30,7 +30,7 @@ class WordCloudGenerator {
 
   def SaveToCSV(filename:String):Unit={
     WordCountPairs=WordCountPairs.sortWith(_._2 > _._2)
-    val fileWriter = new FileWriter(new File(""+filename+".csv"))
+    val fileWriter = new FileWriter(new File("csv/"+filename+".csv"))
     for(pair<-WordCountPairs.take(20)) {
       fileWriter.write(pair._2+","+pair._1+"\n")
     }

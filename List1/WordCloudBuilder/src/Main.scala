@@ -22,7 +22,7 @@ object Main {
           case "fout"=> println("Enter name of the file")
             var name=readLine()
             generator.SaveToCSV(name)
-            println("saved to: "+name )
+            println("saved to: "+name+".csv")
           case "cout"=> generator.PrintToConsole()
           case _ => println("Unrecognised option" )
         }
