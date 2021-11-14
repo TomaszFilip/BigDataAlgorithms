@@ -1,0 +1,85 @@
+Most frequent for:The_Last_Dutchess_Of_Belgrade.txt with total N.o. words=205
+duke,205
+trimousette,178
+madame,89
+project,88
+belgarde,83
+duchess,72
+gutenbergtm,56
+work,49
+valençay,49
+eyes,49
+great,36
+works,34
+trimousette’s,32
+love,32
+gutenberg,31
+day,31
+electronic,27
+black,27
+time,26
+heart,26
+Most frequent for:The_Kingmakers.txt with total N.o. words=566
+selden,566
+baron,263
+countess,208
+davis,202
+prince,188
+king,179
+madame,171
+man,145
+time,119
+eyes,118
+asked,114
+moment,112
+good,110
+great,96
+face,95
+ghita,94
+woman,92
+project,88
+work,87
+hand,83
+
+DocumentID:The_Last_Dutchess_Of_Belgrade.txt top 20 TFIDF scores:
+duke, 1.0
+trimousette, 0.868
+belgarde, 0.405
+valençay, 0.239
+trimousette’s, 0.156
+victor, 0.112
+robespierre, 0.098
+vicomte, 0.093
+duke’s, 0.083
+garden, 0.083
+boury, 0.078
+elizabeth, 0.068
+floramour, 0.068
+bride, 0.063
+turnkey, 0.063
+d’aronda, 0.063
+guillotine, 0.054
+valençay’s, 0.054
+coach, 0.054
+château, 0.054
+DocumentID:The_Kingmakers.txt top 20 TFIDF scores:
+selden, 1.0
+baron, 0.465
+davis, 0.357
+prince, 0.332
+ghita, 0.166
+jeneski, 0.136
+scott, 0.102
+danilo, 0.088
+lappo, 0.085
+halsey, 0.074
+nice, 0.071
+suppose, 0.067
+america, 0.067
+selden’s, 0.065
+rémond, 0.06
+instant, 0.053
+affair, 0.051
+protested, 0.051
+europe, 0.048
+question, 0.046
