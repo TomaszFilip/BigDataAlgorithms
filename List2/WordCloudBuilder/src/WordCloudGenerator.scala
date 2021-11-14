@@ -51,10 +51,10 @@ class WordCloudGenerator {
     }
   }
 
-  def PrintToConsoleSeparated():Unit= {
+  def PrintToConsoleSeparated(n:Int):Unit= {
     for (document<-WordCountPairsSeparated) {
       println("Most frequent for:"+document._1+" with total N.o. words="+document._3)
-      for (pair <- document._2.take(20)) {
+      for (pair <- document._2.take(n)) {
         println(pair._1 + "," + pair._2 )
       }
     }

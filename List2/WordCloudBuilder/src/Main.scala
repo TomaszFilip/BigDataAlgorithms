@@ -9,7 +9,7 @@ object Main {
     while (option!="q")
       {
         println("Select option (rf-read from file, rc-read string from console, cout-print to console fout-save to file, q-quit," +
-          "\n scout-print separated to console, r-read all the files hardcoded,tfidf )")
+          "\n scout-print separated to console, r-read all the files hardcoded, tfidf-tfidf analysis on all documents)")
         option=readLine()
         option match {
           case "q" => //do nothing and end
@@ -30,7 +30,7 @@ object Main {
             generator.SaveToCSV(name)
             println("saved to: "+name+".csv")
           case "cout"=> generator.PrintToConsole()
-          case "scout"=>generator.PrintToConsoleSeparated()
+          case "scout"=>generator.PrintToConsoleSeparated(20)
           case "tfidf"=>generator.tfIdfAllDocuments(20)
           case _ => println("Unrecognised option" )
         }
