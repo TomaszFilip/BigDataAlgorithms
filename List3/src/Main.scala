@@ -5,17 +5,18 @@ object Main {
     var footballBooks=Array("FOOTBALL_Behind_the_Line.txt","FOOTBALL_Football_Days_Memories.txt","FOOTBALL_Scottish_Football.txt")
     var s = new Shingles();
     s.ReadFromFile("")
-    val n =1000
-    for(k<-4 to 13)
-      {
-        val filecontents=s.TextToArray(s.ReadFromFile(books(0)))
-        val filecontents2=s.TextToArray(s.ReadFromFile(footballBooks(1)))
-        val shingles=s.TextArrayToShingles(filecontents,k)
-        val shingles2=s.TextArrayToShingles(filecontents2,k)
-        println("Jaccard: "+s.JaccardFull(shingles,shingles2))
-        val hashfunctions=s.GenerateHashFunctions(shingles.length,n)
-        val signatures=s.Signatures(Array(shingles.toSet,shingles2.toSet),hashfunctions)
-        println("MinHashJaccard: "+s.JaccardSignatures(signatures(0),signatures(1)))
+    val ns=Array(10,100,250,500)
+    for(n<-ns) {
+      for (k <- 4 to 13) {
+        val filecontents = s.TextToArray(s.ReadFromFile(books(0)))
+        val filecontents2 = s.TextToArray(s.ReadFromFile(footballBooks(1)))
+        val shingles = s.TextArrayToShingles(filecontents, k)
+        val shingles2 = s.TextArrayToShingles(filecontents2, k)
+        print(k+", "+n+", "+s.JaccardFull(shingles, shingles2)+", ")
+        val hashfunctions = s.GenerateHashFunctions(shingles.length, n)
+        val signatures = s.Signatures(Array(shingles.toSet, shingles2.toSet), hashfunctions)
+        println(s.JaccardSignatures(signatures(0), signatures(1)))
       }
+    }
   }
 }
