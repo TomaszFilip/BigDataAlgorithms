@@ -9,13 +9,21 @@ class MapReduce {
     (5,List())
   )
 
-  def MapAndreduce(): Unit =
+  def MapAndreduce()=
   {
     Reduce(myMap())
   }
 
+
+  def map_fun(edges: Tuple2[Int,List[Int]]):Int={
+    1
+  }
+
+
   def myMap():mutable.Buffer[Map[Int,Int]]={
     var InvertedEdges=mutable.Buffer[Map[Int,Int]]()
+    val output=Graph.map((id,n)=>n.map( g=>(g.id)))
+
     for (edges<-Graph)
       {
         for (edge<-edges._2) {
