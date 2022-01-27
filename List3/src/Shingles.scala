@@ -32,10 +32,9 @@ class Shingles {
     while(index<arr.length-k+1)
       {
         var shingle="".toString()
-        for(kk<-0 to k-2) {
-          shingle = shingle + arr(index + kk) + " "
+        for(kk<-0 to k-1) {
+          shingle = shingle + arr(index + kk)
         }
-        shingle = shingle + arr(index + k-1) + " "
         kshingles.append(shingle)
         index+=1
       }
