@@ -8,7 +8,7 @@ object Main {
   def main(args: Array[String]) = {
     val crawler = new Crawler()
 
-    crawler.Crawl(10)
+    crawler.Crawl(100)
     crawler.PageRank(10)
     crawler.SaveCrawledToCSV("crawled")
     crawler.ReadCrawledFromCSV("crawled.csv")
@@ -21,7 +21,7 @@ object Main {
         case "q" => //do nothing and end
           println("Quit!")
         case "c" =>
-          crawler.Crawl(10)
+          crawler.Crawl(100)
           crawler.SaveCrawledToCSV("crawled")
         case "pr" =>
           crawler.ReadCrawledFromCSV("crawled.csv")

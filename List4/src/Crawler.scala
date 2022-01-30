@@ -21,7 +21,7 @@ class Crawler {
         PagesWithRefs+=((pageStr,ListBuffer.empty[String]))
         for (link<-links.asScala) {
           val href = link.attr("href")
-          if((href.startsWith("/wiki/"))&&(!href.contains("Wikipedia:"))&&(!(href.contains("File:")))&&(!(href.contains("Template:")))&&(!(href.contains("Help:")))&&(!(href.contains("Special:"))))
+          if((href.startsWith("/wiki/"))&&(!href.contains("Wikipedia:"))&&(!(href.contains("File:")))&&(!(href.contains("Template:")))&&(!(href.contains("Help:")))&&(!(href.contains("Special:")))&&(!(href.contains("Portal:"))))
             PagesWithRefs(i)._2+=href
         }
         pageStr=(PagesWithRefs(i)._2)(Random.nextInt(PagesWithRefs(i)._2.size))
